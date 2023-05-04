@@ -1,70 +1,39 @@
-# Getting Started with Create React App
+# About
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This repo is to test deploying default create-react-app on Github. <br>
+Hosted Github site can be accessed [here](http://bklimey.github.io/react-deploy-gh).
 
-## Available Scripts
+Based on:
+1. https://blog.logrocket.com/deploying-react-apps-github-pages/
+2. https://www.youtube.com/watch?v=Q9n2mLqXFpU
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Instructions
+> Note: Assuming Node.js and git are already installed
+1. On local machine, create a new react project using <br>
+`npx create-react-app "react-deploy-gh"` (`"react-deploy-gh"` can be other name)
+2. Nagivate into folder <br>
+`cd react-deploy-gh`
+3. Setup Git for project <br>
+`git init`
+4. Create new empty repo called `react-deploy-gh` (can be other name) in Github
+5. Commit and push local repo to Github
+```
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/bklimey/react-deploy-gh.git
+git push -u origin main
+```
+> `bklimey` should be your Github username and `react-deploy-gh` should be your repo name
+6. Install `gh-pages` using <br>
+`npm install gh-pages --save-dev`
+7. Update `package.json` by adding <br>
+`"homepage": "http://bklimey.github.io/react-deploy-gh",`
+![image](https://user-images.githubusercontent.com/79616664/236174348-c48f786b-ef28-4615-85c2-d96950f1878a.png)
+and <br>
+`"predeploy": "npm run build",` <br>
+`"deploy": "gh-pages -d build",` <br>
+![image](https://user-images.githubusercontent.com/79616664/236174424-50565099-1eef-4918-b246-cb586a6626b7.png)
+8. Push change to Github
+9. Deploy app using <br>
+`npm run deploy`
+10. Website can now be viewed at http://bklimey.github.io/react-deploy-gh
