@@ -1,7 +1,7 @@
 # About
 
 This repo is to test deploying default create-react-app on Github. <br>
-Hosted Github site can be accessed [here](http://bklimey.github.io/react-deploy-gh).
+Hosted Github site can be accessed here: http://bklimey.github.io/react-deploy-gh
 
 Based on:
 1. https://blog.logrocket.com/deploying-react-apps-github-pages/
