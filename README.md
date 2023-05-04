@@ -8,7 +8,7 @@ Based on:
 2. https://www.youtube.com/watch?v=Q9n2mLqXFpU
 
 # Instructions
-> Note: Assuming Node.js and git are already installed
+> Note: Assuming Node.js and Git are already installed
 1. On local machine, create a new react project using <br>
 `npx create-react-app "react-deploy-gh"` (`"react-deploy-gh"` can be other name)
 2. Nagivate into folder <br>
