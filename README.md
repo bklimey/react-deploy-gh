@@ -11,7 +11,7 @@ Based on:
 > Note: Assuming Node.js and Git are already installed
 1. On local machine, create a new react project using <br>
 `npx create-react-app "react-deploy-gh"` (`"react-deploy-gh"` can be other name)
-2. Nagivate into folder <br>
+2. Navigate into folder <br>
 `cd react-deploy-gh`
 3. Setup Git for project <br>
 `git init`
