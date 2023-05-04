@@ -1,6 +1,6 @@
 # About
 
-This repo is to test deploying default create-react-app on Github. <br>
+This repo is to test deploying default create-react-app on Github using `gh-pages`. <br>
 Hosted Github site can be accessed here: http://bklimey.github.io/react-deploy-gh
 
 Based on:
